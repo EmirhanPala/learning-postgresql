@@ -1,0 +1,38 @@
+--Metinsel fonsikyonlar 3 (Replace, Reverse, Substring, LOWER, UPPER)
+
+--'Replace'
+--Sorgu ekranına girilen her hangi bir ifadenin harflerini değiştiriyor.
+--Örnek:
+--SELECT id,REPLACE(adi,'i','ı') FROM bolum3
+--Çıktı:
+--Tablodaki verilerin içinde 'i' harfi geçenleri 'ı' olarak yazıp verdi.
+--Matematik = Matematık
+
+--'Reverse'
+--İlgili ifadeyi tersden yazdırır.
+--Örnek:
+--SELECT REVERSE(adi) FROM bolum3
+--Çıktı:
+--Tablodaki verilerin içindeki kelimeleri tersden yazıp verdi.
+-- Matematik = kitametaM
+
+--'Substring'
+--3 Parametre yazılabiliyor. Girilen metinsel ifadeyi istenilen karakterden istenilen karaktere kadar yazıyor.
+--Örnek:
+--SELECT SUBSTRING('Emirhan PALA', 4, 2)
+--Çıktı:
+--rh | 4'üncü karakterden itibaren 4 ve 5 i almış oldu. 2 Karakter getirdi.
+
+--'Lower'
+--Kullanılan parametredeki string ifadelerin hepsini küçük yazar.
+--Örnek:
+--SELECT LOWER(adi) FROM bolum3
+--Çıktı:
+--Matematik = matematik
+
+--'Lower'
+--Kullanılan parametredeki string ifadelerin hepsini büyük yazar.
+--Örnek:
+--SELECT UPPER(adi) FROM bolum3
+--Çıktı:
+--Matematik = MATEMATIK

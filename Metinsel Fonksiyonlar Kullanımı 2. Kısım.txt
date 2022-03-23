@@ -1,0 +1,20 @@
+--Metinsel Fonksiyonlar 2 Kısım (LEFT, RIGHT, LENGTH)
+
+--'LEFT'
+--LEFT fonksiyonu iki parametre alan 1 parametrede metin 2 parametrede soldan başlayıp kaç karakterlik
+--kısmının alınacağı değerdir.
+--Örnek:
+--SELECT LEFT('Merhaba Dünya', 3)
+--Çıktı: Mer
+
+--'RIGHT'
+--LEFT'in yaptığı işlemin tersini gerçekleştiriyor.
+--Örnek:
+--SELECT RIGHT('Merhaba Dünya', 3)
+--Çıktı: nya
+
+--'LENGTH'
+--Gelen parametrenin kaç karakter olduğu bilgisini veriyor.
+--Örnek:
+--SELECT LENGTH('Benim manevi mirasım bilim ve akıldır')
+--Çıktı: 37 | Aradaki boşluklarla beraber toplamda 37 karakter olduğunu söyledi.

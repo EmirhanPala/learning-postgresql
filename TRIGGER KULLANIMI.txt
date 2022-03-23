@@ -1,0 +1,46 @@
+--TRIGGER KULLANIMI
+--Bir tabloda her hangi bir değişiklik yapıldıktan sonra
+--Örnek: INSERT, UPDATE, SELECT veya DELETE işleminden sonra .. işlemlemleri gerçekleşdikten sonra
+--Bir başka tablonun veya aynı tablonun bu durumdan etkilenmesidir.
+--Örnek:
+-- CREATE TABLE toplamfakulte
+-- (
+-- 	sayi integer
+-- )
+-- SELECT * FROM toplamfakulte
+--Fakulte tablosundaki toplam verinin sayısını yazdık. COUNT
+--INSERT INTO toplamfakulte VALUES(8)
+
+--Ekliyeceğimiz triggerin yapacağı işlem
+--fakulte tablomuza her hangi bir veri kaydı yaptıktan sonra toplamfakulte tablomuzda yer alan sayı sütunu bir artsın
+--otomatik olarak gerçekleşecek
+
+--TRIGGER'da iki adım takip ediyor.
+--Bu adımlardan birincisi fonksiyon oluşturuyor. Bu fonksiyonda yapılacak olan işlem belirleniyor.
+--Sonrasındada TRIGGER oluşturuluyor. 
+--SQL'deki gibi direkt ifade yerine genelde tercih edilen yöntem bu oluyor.
+
+-- CREATE OR REPLACE FUNCTION test()
+-- RETURNS TRIGGER
+-- AS
+-- $$
+-- BEGIN
+-- UPDATE toplamfakulte SET sayi=sayi+1;
+-- RETURN new;
+-- END;
+-- $$
+-- LANGUAGE plpgsql
+
+--TEKTİKLEYİCİ OLUŞTURMA
+
+-- CREATE OR REPLACE TRIGGER testtrig --Triggerimizi oluşturuyoruz
+-- AFTER INSERT --Trigger ne zaman çalışacak? INSERT işleminden sonra
+-- ON fakulte --Trigger hangi tabloda insert işlemi yapıldıktan sonra çalışacak? fakulte tablosunda
+-- FOR EACH ROW --Her satır için demek Her bi fakulte tablosuna ekleme yapıldıktan sonra
+-- EXECUTE PROCEDURE test(); --execute(uygulamak) prosedur x prosedürü çalıştır.
+
+--SELECT * FROM toplamfakulte
+--SELECT * FROM fakulte
+
+--INSERT INTO	fakulte VALUES(11,'bb')
+

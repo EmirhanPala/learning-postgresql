@@ -1,0 +1,12 @@
+--INSERT INTO fakulte(id,ad) VALUES (3,'İibf')
+
+--SELECT * FROM fakulte
+
+INSERT INTO bolum(bolumid,bolumad,bolumf) VALUES (4,'tiyatro',5)
+--SELECT * FROM bolum
+--Fakülte numarasının içerisinde bulunmayan değeri verdiğimizde 
+-- ERROR:  insert or update on table "bolum" violates foreign key constraint "bolumfakulte_foreign"
+-- DETAIL:  Key (bolumf)=(5) is not present in table "fakulte".
+-- SQL state: 23503
+
+-- Hata kodu çalışıyor ve foreign keyimizin çalıştığını gösteriyor.

@@ -1,0 +1,4 @@
+--Veritabanını içerisindeki tablodaki bütün değerleri aynı anda silmek ve sıfırlamak için kullanılır.
+--truncate table urun
+SELECT * FROM urun
+

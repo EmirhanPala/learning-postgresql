@@ -1,0 +1,22 @@
+-- DO $$
+-- DECLARE
+-- 	sayi int:=2;
+-- BEGIN
+-- 	IF sayi%2=0 THEN
+-- 		RAISE NOTICE 'Sayı çifttir';
+-- 	ELSE
+-- 		RAISE NOTICE 'Sayı tektir.';
+-- 	END IF;
+-- END $$
+
+DO $$
+	DECLARE 
+	Adet int;
+BEGIN
+Adet:=(SELECT COUNT(*) FROM dersler WHERE bolumid=1);
+IF adet>3 THEN
+RAISE NOTICE 'ilgili numaralı bölümde 3 den fazla Ders var';
+ELSE
+RAISE NOTICE 'ilgili numaralı bölümde 3 den az Ders var';
+END IF;
+END $$

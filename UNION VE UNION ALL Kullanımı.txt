@@ -1,0 +1,13 @@
+--UNION ve UNION ALL Komutu Kullanımı
+
+--'UNION'
+--Tabloları birleştirip verileri tek tablo şeklinde yazmak için kullanılır.
+--Tablo içinde ismi birden fazla kes geçen değerleri 1 kez alıyor.
+--DISTINCT bir işlem uyguluyor. 
+
+--'UNION ALL'
+--DISTINCT işlemi uygulamadan tekrar edenleri getiriyor.
+
+SELECT * FROM bolum2
+UNION ALL
+SELECT * FROM bolum3

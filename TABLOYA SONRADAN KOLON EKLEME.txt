@@ -1,0 +1,6 @@
+ALTER TABLE IF EXISTS public.dersler
+    ADD COLUMN test integer;
+
+ALTER TABLE IF EXISTS dersler
+ADD COLUMN deneme integer primary key not null,
+ADD COLUMN ekle varchar(15) not null;

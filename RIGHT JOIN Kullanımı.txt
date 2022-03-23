@@ -1,0 +1,8 @@
+--SELECT * FROM FAKULTE
+--SELECT * FROM BOLUM
+
+--Koşul sağlandığı için fakulte içindeki tanımlanmayan idler görünmez
+--SELECT id,ad,bolumad FROM fakulte RIGHT JOIN bolum ON bolum.bolumf=fakulte.id
+
+--Koşul sağlanmadığı için fakulte içindeki tanımlı olmayanlar görünür ve null atanır.
+--SELECT id,ad,bolumad FROM bolum RIGHT JOIN fakulte ON bolum.bolumf=fakulte.id

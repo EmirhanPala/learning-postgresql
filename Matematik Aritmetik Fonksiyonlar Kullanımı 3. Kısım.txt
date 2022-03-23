@@ -1,0 +1,25 @@
+--Matematik Aritmetik Fonksiyonlar 3 (Log, Sign Sqrt)
+
+--'SIGN'
+--Girilen parametrenin negatifmi yoksa pozitifmi olduğunu veriyor.
+--Örnek:
+--SELECT SIGN(25)
+--Çıktı: 1 Pozitif Değeri Verdi!
+--SELECT SIGN(-25)
+--Çıktı: -1 Negatif Değeri Verdi!
+--SELECT SIGN(0)
+--Çıktı: 0 | 0 Sonucunu veriyor.
+
+--'SQRT'
+--Karekök alır.
+--Örnek:
+--SELECT SQRT(625)
+--Çıktı: 25 | 625'in karekökü 25'dir.
+
+--'LOG'
+--Parametrelerin Logoritmik değerini verir.
+--Örnek:
+--SELECT LOG(50)
+--Çıktı: 1.6989700043360187
+
+

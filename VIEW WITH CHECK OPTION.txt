@@ -1,0 +1,35 @@
+--VIEW WITH CHECK OPTION
+--Açıklaması 24 Satırda!
+
+--VIEW üzerinden veri ekleme işlemi
+--VIEW kullanılarak ilgili tabloya veri eklemeside yapılabilir.
+--VIEW'ler genellikle SELECT işlemleri için kullanılıyor.
+--Veri girişi yapılırken class insert into kullanılmayacaksa büyük ihtimalle PROCEDURES kullanımı uygulanır.
+
+-- CREATE VIEW view2
+-- AS
+-- SELECT * FROM dersler
+
+--SELECT * FROM view2
+
+--SELECT dersad,LENGTH(dersad) AS DERS_AD_KARAKTER FROM dersler WHERE LENGTH(dersad)>12
+
+--MANUEL LENGTH(dersad)>12 VIEW İÇİNE EKLENDİ.
+
+--INSERT INTO view2 (id,dersad) VALUES (8,'Optimizasyon Teknikleri')
+
+--SELECT * FROM view2
+
+--WITH CHECK OPTION
+--VIEW'imizde INSERT,UPDATE veya DELETE işlemlerinde VIEW'e bağlı koşulun sağlanmadığı durumlarda
+--İlgili işlemin gerçekleşmesini önlemek amacıyla kullanılan yapıdır.
+
+--MANUEL WITH CHECK OPTION view2 İçerisine eklendi.
+--INSERT INTO view2 (id,dersad) VALUES (9,'oop')
+
+--WHERE ile belirttiğimiz şart sağlanmadığı için OOP eklenemiyor.
+
+--Hata çıktısı: 
+-- ERROR:  new row violates check option for view "view2"
+-- DETAIL:  Failing row contains (9, oop, null, null).
+-- SQL state: 44000

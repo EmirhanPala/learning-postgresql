@@ -1,0 +1,25 @@
+--'INTERSECT VE EXCEPT Kullanımı'
+--INTERSECT iki tablonun ortak alanına ait kayıtların listelendiği sql komutudur.
+--İngilizceden türkçeye kesim olarak çevriliyor.
+--Tablomuzdaki ortak alanları bize listeler.
+
+--EXCEPT iki tablo arasındaki farkı bulmak için kullanılan sql komutudur.
+--İlk tabloda olup ikinci tabloda olmayan alanları gösterir.
+--Üste yazılan tablo ismiyle alta yazılan tablo isminin sırası önemli
+
+-- CREATE TABLE bolum3
+-- (
+-- 	id integer primary key not null,
+-- 	adi varchar(20)
+-- )
+-- INSERT INTO bolum3 (id,adi) VALUES 
+-- (1,'Matematik'),
+-- (2,'Test'),
+-- (3,'Kimya'),
+-- (4,'Edebiyat'),
+-- (5,'Cografya'),
+-- (6,'Biyoloji')
+
+SELECT * FROM bolum2
+EXCEPT
+SELECT * FROM bolum3

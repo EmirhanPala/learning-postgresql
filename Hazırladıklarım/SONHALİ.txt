@@ -1,0 +1,85 @@
+-- CREATE TABLE KIMLIK
+-- (
+-- 	KIMLIK_ID integer primary key not null,
+-- 	AD varchar(30) not null,
+-- 	SOYAD varchar(30) not null,
+-- 	TCKIMLIK numeric(11) not null,
+-- 	DOGUMTARIH date not null,
+-- 	IL_ID integer not null,
+-- 	CINSIYET_ID integer not null
+-- )
+--SELECT * FROM kimlik
+-- CREATE TABLE IL
+-- (
+-- 	IL_ID integer primary key not null,
+-- 	IL_ADI varchar(50) not null
+-- )
+--SELECT * FROM il
+-- CREATE TABLE CINSIYET
+-- (
+-- 	CINSIYET_ID integer primary key not null,
+-- 	CINSIYET varchar(5) not null
+-- )
+--SELECT * FROM cinsiyet
+
+-- INSERT INTO kimlik VALUES
+-- (1,'Emirhan', 'Pala', '15223588745', '26.07.1997', 16, 1),
+-- (2,'Sercan', 'Deneme', '82263588245', '22.12.1995', 06, 1),
+-- (3,'Zeynep', 'Kaya', '42582588745', '12.12.1990', 34, 2),
+-- (4,'Ebru', 'Elibol', '65327844605', '10.11.1980', 35, 2)
+--SELECT * FROM kimlik
+
+-- INSERT INTO il VALUES
+-- (6, 'Ankara'),
+-- (16, 'Bursa'),
+-- (34, 'İstanbul'),
+-- (35, 'İzmir')
+--SELECT * FROM il
+
+-- INSERT INTO cinsiyet VALUES
+-- (1,'Erkek'),
+-- (2,'Kadın')
+--SELECT * FROM cinsiyet
+
+--ESKİ FUNCTION
+-- CREATE OR REPLACE FUNCTION GETHASTACINSIYET(KIMLIK_ID_ID int)
+-- RETURNS TABLE
+-- (
+-- 	Cinsiyet varchar
+-- )
+-- AS
+-- $$
+-- BEGIN
+-- 	RETURN QUERY
+-- 	SELECT
+-- 	C.cinsiyet
+-- 	FROM
+-- 	cinsiyet C
+-- 	WHERE C.cinsiyet_id=KIMLIK_ID_ID;
+-- END;
+-- $$
+-- LANGUAGE plpgsql;
+-- SELECT GETHASTACINSIYET(1)
+
+--Güncellediğim Function
+CREATE OR REPLACE FUNCTION GETHASTACINSIYET2(KIMLIK_ID_ID integer)
+RETURNS varchar AS $$
+DECLARE
+	HastaCinsiyet varchar:=(SELECT
+		cinsiyet
+	FROM
+		cinsiyet
+	WHERE cinsiyet_id=KIMLIK_ID_ID);
+BEGIN
+	RETURN HastaCinsiyet;
+END;
+$$
+LANGUAGE plpgsql;
+
+
+-- CREATE OR REPLACE VIEW V_KIMLIK
+-- AS
+-- SELECT kimlik_id,ad,soyad,tckimlik,dogumtarih,Z.il_adi,GETHASTACINSIYET(cinsiyet_id) AS Cinsiyet FROM kimlik K
+-- INNER JOIN il Z ON K.il_id=Z.il_id
+
+SELECT * FROM v_kimlik

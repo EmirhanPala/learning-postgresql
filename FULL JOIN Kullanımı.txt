@@ -1,0 +1,9 @@
+--FULL JOIN Kullanımı
+
+--LEFT JOIN'de Sol tarafta var sağ tarafta yoksa sağ taraftaki değerlere null ataması yapıyor.
+--RIGHT JOIN'de Tam tersi sağda var solda yoksa soldaki değerlere null ataması yapıyor.
+--'FULL JOIN'de ise iki tabloda bulunan bütün değerleri çek 
+--Birinde olup birinde olmayan alanlara null ata
+--(Sağdada olabilir soldada olabilir)
+
+SELECT musteri.ad,soyad,sehir,meslek.ad FROM musteri FULL JOIN meslek ON musteri.meslek=meslek.id

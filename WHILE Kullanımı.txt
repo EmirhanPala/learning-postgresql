@@ -1,0 +1,12 @@
+DO $$
+	DECLARE 
+	sayac int:=1;
+	toplam int:=0;
+BEGIN
+	WHILE sayac<=10 LOOP
+	RAISE NOTICE 'Sayaç: %',sayac;
+	toplam:=sayac+toplam;
+	sayac:=sayac+1;
+	END LOOP;
+	RAISE NOTICE 'Sayıların toplamı: %', toplam;
+END $$

@@ -1,0 +1,28 @@
+--VIEW Oluşturma ve Kulanımı
+--SQL Tablolarının gerçek bir tabloymuş gibi sanal bir tabloda toplayan özellikle ilişki ve uzun
+--birleştirmelerde karmaşık sorguları basit hale getiren yapılardır.
+--Uzun bir sql join sorgusunu kod blogumuz veya sorgu ekranı içinde çağırmak yerine yalnızca
+--VIEW ismini çağırarak aynı sorguyu çağırabiliriz.
+--Programlama dillerindeki method yapıları gibi
+
+--VIEW Neden Kullanılmalı?
+--Uzun sql sorgularını tek bir kelime altında çağırmamıza olanak sağlayarak sorgu karmaşasını önler.
+--Tablo adlarını veya sütunlarının görünmesini istemediğimiz kısmında sadece view ismini çağırarak
+--İlgili tabloların güvenliği sağlanabilir.
+--VIEW'ler sayesinde sorgu süreleri kısaltılır.
+--İçerisine WHERE ile şartlı sorgular yazılarak sorgular şartlı hale getirilebilir.
+--GROUP BY ile gruplandırma kullanılabilir.
+--JOIN vs hepsi kullanılabiliyor.
+
+--Örnekler:
+--VIEW Oluşturma:
+
+--CREATE VIEW View1
+--AS
+--SELECT bolumid,bolumad,ad FROM bolum INNER JOIN fakulte ON bolum.bolumf=fakulte.id
+
+--VIEW Görüntüleme:
+SELECT * FROM View1
+
+
+

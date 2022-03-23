@@ -1,0 +1,17 @@
+--Tarih Zaman Fonksiyonları (CURRENT_DATE, CURRENT_TIME, NOW)
+
+--'CURRENT_DATE'
+--Çalıştığı ana ait tarihi getiriyor. Yıl/Ay/Gün
+--SELECT CURRENT_DATE
+
+--'CURRENT_TIME'
+--Çalıştığı ana ait zamanı getiriyor. Saat/Dakika/Saniye/Salise + GMT
+--SELECT CURRENT_TIME
+--Sağ tarafına eklenecek olan basamak sayısıyla salise değiştirilebilir
+--SELECT CURRENT_TIME(1)
+
+--'NOW'
+--Yerel saat dilimini veriyor.
+--SELECT NOW()
+--Çıktı: Yıl/Ay/Gün Saat/Dakika/Saniye/Sanise + GMT
+

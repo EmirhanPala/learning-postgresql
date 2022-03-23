@@ -1,0 +1,32 @@
+--SELECT * FROM musteri WHERE bakiye=(select max(bakiye) FROM musteri)
+
+--SELECT * FROM musteri WHERE bakiye=(select max(bakiye) FROM musteri WHERE sehir='Ankara')
+
+--Max bakiye istanbulda ve biz ankarayı arttırdığımız için null dönecek.
+--SELECT * FROM musteri WHERE bakiye=(select max(bakiye) FROM musteri) AND sehir='Ankara'
+
+-- CREATE TABLE meslek
+-- (
+-- 	id integer primary key not null,
+-- 	ad varchar(15) not null
+-- )
+
+--INSERT INTO meslek (id,ad) VALUES (3,'mühendis')
+
+--SELECT * FROM meslek
+
+--Manuel meslek eklendi musteriye
+
+--SELECT * FROM musteri
+
+--SELECT * FROM musteri WHERE meslek=(SELECT id FROM meslek WHERE ad='öğretmen')
+
+--SELECT * FROM musteri WHERE meslek=(SELECT id FROM meslek WHERE ad='mühendis')
+
+--Mühendislerin maaşına %10 zam ekleme
+--UPDATE musteri SET bakiye=bakiye+bakiye*0.1 WHERE meslek=(SELECT id FROM meslek WHERE ad='mühendis')
+--SELECT * FROM musteri
+
+--Her hangi bir kısıtlama olmadan alt sorgunun içine alt sorgu yapılabilir.
+
+--Grouplandırma altında alt sorgu gerçekleştirme 

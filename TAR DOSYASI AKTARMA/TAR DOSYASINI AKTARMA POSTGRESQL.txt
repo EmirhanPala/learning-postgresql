@@ -1,0 +1,2 @@
+KOMUT
+C:\Program Files\PostgreSQL\14\bin\pg_restore.exe --host "localhost" --port "5432" --username "postgres" --no-password --dbname "deneme" --verbose "C:\\Users\\Lenovo\\Desktop\\DVDREN~1.TAR"

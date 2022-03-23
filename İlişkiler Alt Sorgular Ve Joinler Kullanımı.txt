@@ -1,0 +1,12 @@
+--SELECT * FROM bolum WHERE bolumf=(SELECT id FROM fakulte WHERE ad='İibf')
+
+--SELECT bolumf,COUNT(*) FROM bolum GROUP BY bolumf ORDER BY bolumf
+
+--SELECT ad,COUNT(*) AS Sayi FROM bolum INNER JOIN fakulte ON bolum.bolumf=fakulte.id
+--GROUP BY ad ORDER BY Sayi
+
+--INSERT INTO bolum (bolumid,bolumad,bolumf) VALUES (8,'metalurji',1)
+
+--Ödev bolum tablosunda en çok kullanılan fakulte adını ekrana yazdırmak
+--SELECT ad,COUNT(*) AS sayi FROM fakulte INNER JOIN bolum ON fakulte.id=bolum.bolumf
+--GROUP BY fakulte.ad ORDER BY sayi DESC LIMIT 1

@@ -1,0 +1,34 @@
+--TRIGGER'DA DEĞİŞKEN KULLANIMI
+-- CREATE TABLE toplamfakulte2
+-- (
+-- 	sayi integer
+-- )
+--SELECT * FROM toplamfakulte2
+--INSERT INTO toplamfakulte2 VALUES(0)
+
+--OLUŞTURACAĞIMIZ TETİKLEYİCİ 
+--fakulte tablosuna yeni bir fakulte ismi eklendiği zaman bu fakultenin adı
+--kaç karakterse toplamfakulte2'deki sütun o kadar karakter artsın.
+--dışarıdan parametreye bağlı olarak artacak.
+
+-- CREATE OR REPLACE FUNCTION TEST1() RETURNS TRIGGER AS $$
+-- DECLARE
+-- 	uzunluk integer;
+-- BEGIN
+-- 	uzunluk:=(SELECT LENGTH(ad) FROM fakulte ORDER BY id DESC LIMIT 1);
+-- 	UPDATE toplamfakulte2 SET sayi=sayi+uzunluk;
+-- 	RETURN NEW;
+-- END;
+-- $$
+-- LANGUAGE plpgsql
+
+-- CREATE TRIGGER test1trig
+-- AFTER INSERT
+-- ON fakulte
+-- FOR EACH ROW
+-- EXECUTE PROCEDURE test1();
+
+--SELECT * FROM toplamfakulte2
+--SELECT * FROM fakulte
+--INSERT INTO fakulte (id,ad) VALUES (13,'Fen')
+--SELECT * FROM toplamfakulte2

@@ -1,0 +1,11 @@
+--Age Kullanımı
+--İki tarih arasındaki farkı postgresql'in sunduğu formatla görüntüleyebilmek.
+--Fark genelde Yıl/Ay/Gün bazında veriliyor.
+--Kullanım:
+--SELECT AGE(TIMESTAMP '01.09.2020')
+--Çıktı: 1 Year 5 Mons 8 Days
+--SELECT AGE(TIMESTAMP '07.02.2022')
+--Çıktı: 2 days
+
+--Tablo bazlı kullanımı nasıl yapılır?
+SELECT ad,tarih,AGE(NOW(), tarih) FROM kitaplar

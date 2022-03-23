@@ -1,0 +1,37 @@
+--FONKSİYON KULLANIMI 1
+--Kendimize ait postgresqlin desteklediklerinin dışında fonksiyon oluşturmaya yarar.
+
+--Fonksiyonlar procedurlere yakın bir başlık procedurlerden farkları var
+--Procedurlerde geriye dönüş değeri yoktur. Ama fonksiyonlarda geriye dönüş değeri vardır.
+--PostgreSQL'de fonksiyonlar procedurlere göre daha fazla kullanılıyor.
+--Örnek: İki sayının toplamını hesaplayan fonksiyon
+
+-- CREATE OR REPLACE FUNCTION toplam(s1 int, s2 int)
+-- RETURNS int
+-- LANGUAGE plpgsql
+-- AS
+-- $$
+-- DECLARE sonuc integer;
+-- BEGIN
+-- sonuc:=s1+s2;
+-- RETURN sonuc;
+-- END;
+-- $$;
+
+--SELECT toplam(45, 30);
+
+--FONKSIYON KULLANIMI 2
+--SELECT * FROM kitaplar
+
+-- CREATE OR REPLACE FUNCTION KDVLI(fiyat float)
+-- RETURNS FLOAT
+-- LANGUAGE plpgsql
+-- AS
+-- $$
+-- BEGIN
+-- fiyat:=fiyat*0.08+fiyat;
+-- RETURN fiyat;
+-- END;
+-- $$;
+
+--SELECT ad,yazar,fiyat,kdvli(fiyat) FROM kitaplar

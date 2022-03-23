@@ -1,0 +1,29 @@
+-- CREATE TABLE fakulte
+-- (
+-- 	id integer primary key not null,
+-- 	ad varchar(20)
+-- )
+
+-- CREATE TABLE bolum
+-- (
+-- 	bolumid integer primary key not null,
+-- 	bolumad varchar(20) not null,
+-- 	bolumf integer not null
+-- )
+
+--'PRIMARY KEY' tabloda ilgili satırın tekrar 
+-- etmesinin önüne geçmek ve sadece o satıra ait
+-- bir id değeri oluşturmak için kullanılan alandır.
+
+--'FOREIGN KEY' PRIMARY KEY ile ilişki içerisine dahil
+--edeceğimiz sütün olarak karşımıza çıkıyor.
+
+--Tabloda PRIMARY KEY alanları ayrı ilişki kurabilmemiz
+--için FOREIGN KEY'e ihtiyacımız var!
+
+--Komut ile FOREING KEY oluşturmak.
+-- ALTER TABLE IF EXISTS PUBLIC.BOLUM ADD CONSTRAINT BOLUMFAKULTE_FOREIGN
+-- FOREIGN KEY (BOLUMF) REFERENCES PUBLIC.FAKULTE (ID) MATCH SIMPLE ON
+-- UPDATE NO ACTION ON
+-- DELETE NO ACTION NOT VALID;
+-- CREATE INDEX IF NOT EXISTS FKI_BOLUMFAKULTE_FOREIGN ON PUBLIC.BOLUM(BOLUMF);

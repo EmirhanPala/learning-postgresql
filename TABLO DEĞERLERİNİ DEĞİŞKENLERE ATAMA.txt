@@ -1,0 +1,15 @@
+--Tablo Değerlerini Değişkenlere Atama
+
+DO $$
+DECLARE 
+toplam int;
+toplam2 int;
+odevDegiskeni int;
+BEGIN
+toplam:=(SELECT COUNT(*) FROM dersler);
+toplam2:=(SELECT COUNT(*) FROM dersler WHERE LENGTH(dersad)>10);
+odevDegiskeni:=toplam-toplam2;
+RAISE NOTICE 'Derslerin kayıt sayısı: %', toplam;
+RAISE NOTICE 'Derslerin adı 10 karakterden uzun ders sayısı %', toplam2;
+RAISE NOTICE 'Ödev cevabı: %', odevDegiskeni;
+END $$;

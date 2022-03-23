@@ -1,0 +1,26 @@
+--PROCEDURE KULLANIMI
+--Belirli işleri yapmak için bu işlemin tamamının tek bir kelime altında toplandığı yapılardır.
+
+-- CREATE OR REPLACE PROCEDURE DENEME()
+-- LANGUAGE plpgsql
+-- AS $$
+-- BEGIN
+-- RAISE NOTICE 'PostgreSQL derslerimiz devam ediyor.';
+-- RAISE NOTICE 'PostgreSQL 2.satır burası.';
+-- END; $$
+
+-- --PROSEDURE ÇAĞIRMA
+-- CALL DENEME()
+--Yukarıdaki işlemler 1 inci aşama
+
+--PROSEDURE PARAMETRE ATAMALI KULLANIMI
+--SELECT * FROM fakulte
+
+-- CREATE OR REPLACE PROCEDURE fakulte_ekle(p1 integer,p2 text)
+-- LANGUAGE SQL
+-- AS $$
+-- INSERT INTO fakulte (id,ad) VALUES (p1,p2);
+-- $$;
+
+-- CALL fakulte_ekle(7, 'Besyo');
+-- SELECT * FROM fakulte

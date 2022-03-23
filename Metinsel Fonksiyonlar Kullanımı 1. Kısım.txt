@@ -1,0 +1,23 @@
+--Metinsel Fonksiyonlar (Ascii, Concat, Concat_Ws)
+--SQL'de kullandığımız sorgularda bir takım fonksiyonlar sayesinde 
+--yapacağımız işlemleri tek kelimelik kısa işlemlerle çözebiliriz.
+--Her hangi bir sütuna ait değeri tersinden yazdırabiliriz.
+--Sol veya Sağ kısmına istediğimiz kadar karakteri sildirebiliriz.
+
+--'ASCII'
+--Girilen karakterin ASCII kod tablosundaki karşılığı veriyor.
+--Örnek
+--SELECT ASCII('A')
+
+--'CONCAT'
+--Girilen parametleri birleştiren fonksiyondur.
+--Örnek
+--SELECT CONCAT('Günaydın','SQL','Dersleri')
+--Çıktı: GünaydınSQLDersleri | Kelime içinde boşluk bırakılırsa cümle formatında çıktı verir.
+
+--'CONCAT_WS'
+--Yapı olarak concat'e benzeyen CONCAT_WS fonksiyonu farklı olarak girilen parametleri birleştirmek yerine
+--Parametreler arasına parantez içerisindeki ilk parametreyi ekliyor.
+--Örnek
+--SELECT CONCAT_WS('*','Günaydın','SQL','Dersleri')
+--Çıktı: Günaydın*SQL*Dersleri

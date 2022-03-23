@@ -1,0 +1,13 @@
+--PG SLEEP Komutu
+--WAIT FOR Yazılan SQL sorgularını istenilen zamanda veya belli bir saniyede, dakika veya saat sonra çalıştıran
+--T SQL komutudur.
+--Nerede kullanılabilir?
+--Yedekleme işleminde kullanılabilir. vs vs.
+--Örnek:
+
+--SELECT PG_SLEEP(5);
+--SELECT * FROM bolum
+--Bolum tablosunun verileri 5 saniye sonra gelmiş oldu.
+
+SELECT PG_SLEEP(3);
+SELECT * FROM kitaplar

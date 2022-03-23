@@ -1,0 +1,39 @@
+--Mateatiksel Fonksiyonlar (ABS, CEIL, FLOOR, PI)
+
+--'ABS '
+--İlgili değerin mutlak değerini veriyor.
+--Her hangi bir sayının mutlak değerleri bir sayının 0 a olan uzaklığıdır.
+--Örnek:
+--SELECT (-5)
+--Çıktı: -5
+--Kullanım:
+--SELECT ABS(-5)
+--Çıktı: 5
+--(Negatif değerlerin istenmediği durumlarda kullanılabilecek bir fonksiyondur.)
+
+--'CEIL & CEILING'
+--Türkçe karşılığı tavan anlamına geliyor.
+--Parametre olarak girilen ondalıklı sayıyı bir üst sayıya yuvarlıyor.
+--Örnek:
+--SELECT (4.85)
+--Çıktı: 4.85
+--Kullanım:
+--SELECT CEIL(4.85)
+--Çıktı: 5
+
+--'FLOOR'
+--Asansörlerde karşımıza çıkan bir kelimedir.
+--Zemin anlamına gelir.(Yani Giriş kat)
+--Parametre olarak girilen sayıyı bir alt tam sayıya yuvarlıyor.
+--Örnek:
+--SELECT FLOOR(4.85)
+--Çıktı: 4
+
+--'PI'
+--PI sayısını tek başına kullanmak çok sağlıklı değil.
+--PI'nın kullanımı PI sayısının değerini veriyor.
+--Sütun üzerindeki her hangi bir işlemde PI değeri kullanılabilir.
+--Örnek:
+--SELECT PI()
+--Çıktı:
+--3.141592653589793

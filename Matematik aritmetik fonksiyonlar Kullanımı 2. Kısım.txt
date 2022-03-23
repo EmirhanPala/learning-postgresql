@@ -1,0 +1,25 @@
+--Aritmetik fonksiyonlar (RANDOM, ROUND, POWER)
+
+--'POWER'
+--Girilen iki parametreye göre üs alma işlemi yapıyor.
+--İlk parametre taban ikinci parametre kuvvet şeklinde. 
+--Örnek:
+--SELECT POWER(2,4)
+--Çıktı: 16 | Yapılan işlem=2*2*2*2= 2*2=4*2=8*2=16
+
+--'RANDOM'
+--Normalde SQL'de RAND olarak çalışıyor.
+--0 ile 1 arasında rastgele ondalıklı bir değer getiren fonksiyondur.
+--Her çalıştırmada farklı bir değer üretir.
+--Burada 0 dan 1 oluşturma söz konusu değil
+--İşin arka planında çalışan aritmetik bir denklem bulunmakta.
+--Örnek:
+--SELECT RANDOM()
+--Çıktı: 0.8007154441296827
+
+--'ROUND'
+--Girilen ondalıklı sayılar üzerine girilen basamak kadar yuvarlama işlemi yapılıyor.
+--Özellikle tablo bazlı işlemlerde kullanılabilecek bir komuttur. 
+--Örnek:
+--SELECT ROUND(18.12345,2)
+--Çıktı: 18.12

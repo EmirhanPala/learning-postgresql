@@ -1,0 +1,17 @@
+-- CREATE TABLE Kitaplar
+-- (
+-- 	id integer primary key not null,
+-- 	ad varchar(50) not null,
+-- 	yazar varchar(30) not null,
+-- 	tarih date not null
+-- )
+
+-- SELECT * FROM kitaplar
+-- INSERT INTO kitaplar(id,ad,yazar,tarih) VALUES
+-- (2,'Kuyucaklı Yusuf','Sabahattin Ali','30.08.2020'),
+-- (3,'Yer Altından Notlar','Dostoyevski','31.08.2020'),
+-- (4,'Tuna Kılavuzu','Jules Verne','31.08.2020'),
+-- (5,'İki Şehrin Hikayesi','Charlies Dickens','01.09.2020')
+
+INSERT INTO kitaplar(id,ad,yazar,tarih) VALUES
+(6,'Satranç','Zweig','01.09.2020')

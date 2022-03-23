@@ -1,0 +1,15 @@
+DO $$
+DECLARE
+	Sinav1 int:=15;
+	Sinav2 int:=19;
+	Sinav3 int:=60;
+	ortalama int;
+BEGIN
+ortalama:=(Sinav1+Sinav2+Sinav3)/3;
+RAISE NOTICE 'Öğrenci sınav ortalaması: %', Ortalama;
+IF ortalama>50 THEN
+RAISE NOTICE 'Sınıfı geçti';
+ELSE
+RAISE NOTICE 'Sınıfta Kaldı';
+END IF;
+END $$

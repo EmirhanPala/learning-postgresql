@@ -1,0 +1,11 @@
+--SELECT * FROM musteri
+
+--SELECT sehir,COUNT(*) AS Kişi FROM musteri group by sehir ORDER BY COUNT(*)
+
+--SElECT sehir,SUM(bakiye) AS Bakiye FROM musteri group by sehir ORDER BY Bakiye
+
+--SELECT sehir,AVG(bakiye) AS Bakiye FROM musteri group by sehir ORDER BY Bakiye
+
+--SELECT sehir,COUNT(*) AS Kişiler FROM musteri group by sehir HAVING COUNT(*)>3
+
+SELECT avg(bakiye) as ortalama,sehir FROM musteri group by sehir HAVING AVG(bakiye)>5000 OR sehir like '%u%'

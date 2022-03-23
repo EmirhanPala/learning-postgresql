@@ -1,0 +1,11 @@
+--Join birleştirme işlemleri için kullanılır.
+--İki tabloda ortak olan alanları birleştirmek veya
+--Bir tabloda olan diğerinde olmayan tamamını yada ortak olmayan alanları
+--Bu tarz bir kaç farklı türü bulunan tablolar arasında birleştirme yapan yapı
+
+--'INNER JOIN' iki tablo arasındaki ortak alan kesişim kümesine göre birleştirecek
+
+--musteri tablosunda meslekleri sayısal olarka değilde ismiyle göstermek için
+--SELECT * FROM meslek
+--SELECT musteri.ad,soyad,sehir,meslek.ad FROM musteri INNER JOIN meslek ON musteri.meslek=meslek.id
+

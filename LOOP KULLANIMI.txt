@@ -1,0 +1,16 @@
+--LOOP Kullanımı
+
+DO $$
+DECLARE
+	sayac int:=1;
+	toplam int:=0;
+BEGIN
+	LOOP
+		EXIT WHEN sayac=6;
+		--RAISE NOTICE 'Merhaba PostgreSQL Dersleri';
+		toplam:=toplam+sayac;
+		sayac:=sayac+1;
+		--RAISE NOTICE 'Sayaç: %', sayac;
+	END LOOP;
+	RAISE NOTICE 'Ardışık toplam sonucu: %', toplam;
+END $$

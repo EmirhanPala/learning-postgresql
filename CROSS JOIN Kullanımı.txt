@@ -1,0 +1,5 @@
+--'CROSS JOIN' Çarpraz birleştirme anlamına geliyor.
+
+--SELECT * FROM bolum
+
+SELECT bolumad,ad FROM bolum CROSS JOIN fakulte

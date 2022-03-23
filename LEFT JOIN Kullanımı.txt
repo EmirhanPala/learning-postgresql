@@ -1,0 +1,15 @@
+--LEFT JOIN Kullanımı
+--İki tablo arasında sol taraftaki bütün değerleri getirir sağ taraftaki değerlerin tamamını getirmez
+--Sol tarafta ilişkisi olan değerleri getirir
+--Sol tarafta olup sağ tarafta olmayan bir değer varsa sol taraftaki değerleri getirip
+--Sağ taraftaki karşılığı olarak null değer ataması yapar.
+--SELECT * FROM BOLUM
+--SELECT * FROM FAKULTE
+
+--LEFT JOIN durumu sağlandığı için fakultenin içerisindeki null değerler dönmedi
+--SELECT bolumid,bolumad,fakulte.ad FROM bolum LEFT JOIN fakulte ON bolum.bolumf=fakulte.id
+
+--LEFT JOIN durumu sağlanmadığı için içindeki null değerlerde ekrana yansıdı
+--SELECT bolumid,bolumad,fakulte.ad FROM fakulte LEFT JOIN bolum ON fakulte.id=bolum.bolumf
+
+

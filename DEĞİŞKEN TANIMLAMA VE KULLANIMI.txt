@@ -1,0 +1,41 @@
+--Değişken Tanımlama ve Kullanımı
+
+--DECLARE ile tanımlama işlemi gerçekleştiriliyor. Anlamı=Tanımlama
+
+--POSTGRESQL tanımlama gerçekleştirmesi
+--DO BEGIN ve END blokları arasında yapılıyor.
+--END VE DO blogundan sonra $$ sembolü ekleniyor.
+--Örnek:
+-- do $$
+-- declare 
+--
+-- begin
+--
+-- end$$
+
+--Değişken tanımlama BEGIN blogu içerisindede gerçekleştirilebilir veya tanımlanan alandada gerçekleştirilebilir.
+
+--BEGIN VE END blogu arasında yapılacak işlemler gerçekleştirilir. Ekstra: Değer atamasıda yapılabilir.
+--Ekrana yazdırma işlemide gerçekleştirilebilir.
+
+do $$
+declare x int:=20;
+  y int:=5;
+  toplam int;
+  fark int;
+  carpim int;
+  bolum int;
+begin
+toplam:=x+y;
+fark:=x-y;
+carpim:=x*y;
+bolum:=x/y;
+raise notice 'Sayı 1: %',x;
+raise notice 'Sayı 2: %',y;
+raise notice 'Toplam: %',toplam;
+raise notice 'Fark: %',fark;
+raise notice 'Çarpım: %',carpim;
+raise notice 'Bölüm: %',bolum;
+
+
+end $$;

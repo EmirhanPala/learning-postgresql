@@ -1,0 +1,32 @@
+--CASE Kullanımı
+--Dallanmanın çok olduğu özellikle birden fazla şartın olduğu durumlarda kullanılanılan akış kontrolüdür.
+--CASE'in türkçe anlamı DURUM'dur.
+
+SELECT dersad,bolumid,
+	CASE
+		WHEN bolumid=1
+	THEN 'Yazılım'
+		WHEN bolumid=2
+	THEN 'Mekatronik'
+		WHEN bolumid=3
+	THEN 'Elektronik'
+		WHEN bolumid=4
+	THEN 'Makine'
+	END DURATION 
+	FROM dersler
+ORDER BY dersad;
+
+--CASE içinde else kullanımı
+SELECT dersad,bolumid,
+	CASE
+		WHEN bolumid=1
+	THEN 'Yazılım'
+		WHEN bolumid=2
+	THEN 'Mekatronik'
+	ELSE 'Makine'
+	END DURATION 
+	FROM dersler
+ORDER BY dersad;
+
+
+	

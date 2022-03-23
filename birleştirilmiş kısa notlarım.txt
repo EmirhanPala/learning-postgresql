@@ -1,0 +1,34 @@
+--PROCEDURE KULLANIMI
+--Belirli işleri yapmak için bu işlemin tamamının tek bir kelime altında toplandığı yapılardır.
+
+--FONKSİYON KULLANIMI 1
+--Kendimize ait postgresqlin desteklediklerinin dışında fonksiyon oluşturmaya yarar.
+
+--Fonksiyonlar procedurlere yakın bir başlık ama procedurlerden farkları var
+--Procedurlerde geriye dönüş değeri yoktur. Ama fonksiyonlarda geriye dönüş değeri vardır.
+--PostgreSQL'de fonksiyonlar procedurlere göre daha fazla kullanılıyor.
+
+--TRIGGER KULLANIMI
+--Bir tabloda her hangi bir değişiklik yapıldıktan sonra
+--Örnek: INSERT, UPDATE, SELECT veya DELETE işleminden sonra tetikleme işlemlemleri gerçekleşdikten sonra
+--Bir başka tablonun veya aynı tablonun bu durumdan etkilenmesidir.
+
+--VIEW Oluşturma ve Kullanımı
+--SQL Tablolarının gerçek bir tabloymuş gibi sanal bir tabloda toplayan özellikle ilişki ve uzun
+--birleştirmelerde karmaşık sorguları basit hale getiren yapılardır.
+--Uzun bir sql join sorgusunu kod blogumuz veya sorgu ekranı içinde çağırmak yerine yalnızca
+--VIEW ismini çağırarak aynı sorguyu çağırabiliriz.
+--Programlama dillerindeki method yapıları gibi
+
+--VIEW Neden Kullanılmalı?
+--Uzun sql sorgularını tek bir kelime altında çağırmamıza olanak sağlayarak sorgu karmaşasını önler.
+--Tablo adlarını veya sütunlarının görünmesini istemediğimiz kısmında sadece view ismini çağırarak
+--İlgili tabloların güvenliği sağlanabilir.
+--VIEW'ler sayesinde sorgu süreleri kısaltılır.
+--İçerisine WHERE ile şartlı sorgular yazılarak sorgular şartlı hale getirilebilir.
+--GROUP BY ile gruplandırma kullanılabilir.
+--JOIN vs hepsi kullanılabiliyor.
+
+--SUBQUERY KULLANIMI
+--Her hangi bir kısıtlama olmadan alt sorgunun içine alt sorgu yapılabilir.
+--Grouplandırma altında alt sorgu gerçekleştirme 

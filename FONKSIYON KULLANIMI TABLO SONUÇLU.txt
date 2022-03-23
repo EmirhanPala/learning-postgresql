@@ -1,0 +1,25 @@
+--TABLO SONUÇLU FONKSIYONLAR
+
+--SELECT * FROM kitaplar
+-- CREATE OR REPLACE FUNCTION kitapgetir(prmt varchar)
+-- RETURNS TABLE
+-- (
+-- 	--Geriye döndüreceğimiz tabloya ait sütünları yazdırıyoruz.
+-- 	idsutun int,
+-- 	kitapadsutun varchar,
+-- 	kitapyazarsutun varchar
+-- )
+-- AS
+-- $$
+-- BEGIN
+-- 	RETURN QUERY
+-- 	SELECT
+-- 		id,
+-- 		ad,
+-- 		yazar
+-- 	FROM
+-- 	kitaplar WHERE ad like prmt;
+-- END;
+-- $$
+-- LANGUAGE plpgsql;
+--SELECT * FROM kitapgetir('%e%')
